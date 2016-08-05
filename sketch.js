@@ -14,7 +14,7 @@ function setup() {
 function draw() {
   fill(myRed, myGreen, myBlue);
   noStroke();
-  circle(mouseX, mouseY, 10);
+  circle(mouseX, mouseY, 20);
   
   myRed = myRed + 0.5;
   if (myRed > 255){
@@ -25,4 +25,12 @@ function draw() {
     myBlue = 255;
   }
   
+  if (mouseIsPressed){
+    noStroke();
+    fill(255);
+    ellipse(mouseX, mouseY, 20, 20);
+    if (mouseIsPressed == false){
+      fill(myRed, myBlue, myGreen);
+    }
+  }
 }
